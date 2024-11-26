@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, re_path
 
-from common import views as common_views
+from app.common import views as common_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
