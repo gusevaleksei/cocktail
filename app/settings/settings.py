@@ -25,6 +25,10 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '*',
 ]
+# CSRF_TRUSTED_ORIGINS = [
+#
+# ]
+# assert 0
 
 # Application definition
 
@@ -35,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'whitenoise.runserver_nostatic',
+
+    'app.cocktail',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +61,10 @@ ROOT_URLCONF = 'app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'app/template',
+            'app/cocktail/template',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

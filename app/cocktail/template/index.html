@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{#% block title %}{{ section.title }}{% endblock %#}
+
+{% block content %}
+
+<div style="color: green;"> <h2> тут будет наш поиск </h2></div>
+{% if context %}
+<div>
+    {{ context|pprint|linebreaksbr }}
+    <pre>{{ context|pprint }}</pre>
+</div>
+{% endif %}
+{% endblock %}
